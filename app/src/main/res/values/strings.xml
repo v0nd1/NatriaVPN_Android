@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Natria VPN</string>
+    <string name="app_name">natriavpn</string>
+    <string name="natriavpn">natriavpn</string>
 </resources>

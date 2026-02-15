@@ -37,6 +37,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.natria.vpn.ui.DpConstants.betweenSpacer
+import com.natria.vpn.ui.DpConstants.borderStroke
+import com.natria.vpn.ui.DpConstants.cornerShape
+import com.natria.vpn.ui.DpConstants.defaultSpacer
+import com.natria.vpn.ui.DpConstants.extraLargeSpacer
 import com.natria.vpn.ui.components.VpnConnectionButton
 import com.natria.vpn.ui.theme.DarkBlue
 import com.natria.vpn.ui.theme.DarkBlue2
@@ -60,24 +65,24 @@ fun MainScreen(
             .fillMaxSize()
             .background(DarkBlue)
     ) {
-        Spacer(Modifier.height(120.dp))
+        Spacer(Modifier.height(extraLargeSpacer))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
         ) {
             VpnConnectionButton()
         }
-        Spacer(Modifier.height(40.dp))
+        Spacer(Modifier.height(betweenSpacer))
         Column(
             modifier = Modifier
-                .padding(horizontal = 15.dp)
+                .padding(horizontal = defaultSpacer)
         ) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .wrapContentHeight()
-                    .background(DarkBlue3, RoundedCornerShape(15.dp))
-                    .border(BorderStroke(0.5.dp, Color.Gray), RoundedCornerShape(15.dp))
+                    .background(DarkBlue3, RoundedCornerShape(cornerShape))
+                    .border(BorderStroke(borderStroke, Gray), RoundedCornerShape(cornerShape))
             ) {
                 Column(
                     modifier = Modifier
@@ -92,7 +97,7 @@ fun MainScreen(
                             modifier = Modifier
                                 .padding(vertical = 10.dp)
                                 .background(DarkGreen, CircleShape)
-                                .border(BorderStroke(0.5.dp, Green), CircleShape)
+                                .border(BorderStroke(borderStroke, Green), CircleShape)
                                 .size(30.dp),
                             contentAlignment = Alignment.Center
                         ) {
